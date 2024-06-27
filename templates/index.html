@@ -3,15 +3,26 @@
     <head>
         <link rel="stylesheet" type="text/css" 
         href="{{ url_for('static', filename='style.css') }}"/>
-        <title>Spreadsheet Merger 0.1</title>
-        <div style="text-align:center;">
-            <h1>Spreadsheet Merger 0.1</h1>
-        </div>
-        <div>
-            <p> Upload 1st file: </p>
-        </div>
-        <div>
-            <p> Upload 2nd file: </p>
-        </div>
+        <title>Spreadsheet Merger 0.2</title>
     </head>
+    <body>
+        <div>
+            <h1>Spreadsheet Merger 0.2</h1>
+        </div>
+        <form action ="/success" method="post" enctype="multipart/form-data">
+            <div class="grid-container">
+                <div class="item1" id="border-container" >
+                    <p> Upload 1st file: </p>
+                    <input type="file" name="file1" id="file1">
+                </div>
+                <div class="item2" id="border-container" >
+                    <p> Upload 2nd file: </p>
+                    <input type="file" name="file2" id="file2">
+                </div>
+            </div>
+            <div id="button-container"> 
+                <input type="submit" value="Upload">
+            </div>
+        </form>
+    </body>
 </html>
