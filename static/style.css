@@ -8,16 +8,10 @@ div {
     color: blue;
 }
 
-#border-container {
+.dropzone {
     border: 1px solid black;
-}
-
-#large {
-    height: 50%;
-}
-
-#button-container {
-    item-align: center;
+    margin: 10px;
+    height: 50vh;
 }
 
 .grid-container {
@@ -25,14 +19,34 @@ div {
     row-gap: 100px;
 }
 
-.item1 {
+.dropzone.item1 {
     /* Place item on position 1,1 */
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.item2 {
+.dropzone.item2 {
     /* Place item on position 2,1 */
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+.dropzone.item1.dragover {
+    background-color: #f0f0f0;
+}
+
+.dropzone.item2.dragover {
+    background-color: #f0f0f0;
+}
+
+.dropzone.item1.dragleave {
+    background-color: #ffffff;
+}
+
+.dropzone.item2.dragleave {
+    background-color: #ffffff;
+}
+
+.button-container {
+    item-align: center;
 }
