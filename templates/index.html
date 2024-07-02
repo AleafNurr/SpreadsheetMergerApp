@@ -9,20 +9,27 @@
         <div>
             <h1>Spreadsheet Merger 0.2</h1>
         </div>
-        <form action ="/success" method="post" enctype="multipart/form-data">
-            <div class="grid-container">
-                <div class="item1" id="border-container" >
-                    <p> Upload 1st file: </p>
-                    <input type="file" name="file1" id="file1">
-                </div>
-                <div class="item2" id="border-container" >
-                    <p> Upload 2nd file: </p>
-                    <input type="file" name="file2" id="file2">
-                </div>
+        <form
+            id="uploadForm"
+            action="/success"
+            method="post"
+            enctype="multipart/form-data"
+        >
+            <div>
+                <input type="submit" value="Generate!">
             </div>
-            <div id="button-container"> 
-                <input type="submit" value="Upload">
+            <div class="grid-container">
+                <div class="dropzone item1" id="drop-zone-1">
+                    <p> Upload 1st file: </p>
+                    <input id="file-input-1" type="file" />
+                </div>
+                <div class="dropzone item2" id="drop-zone-2">
+                    <p> Upload 2nd file: </p>
+                    <input id="file-input-2" type="file" />
+                </div>
             </div>
         </form>
+        <script type="text/javascript"
+        src="{{ url_for('static', filename='submit.js') }}"></script>
     </body>
 </html>
