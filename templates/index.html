@@ -11,7 +11,7 @@
         </div>
         <form
             id="uploadForm"
-            action="/success"
+            action="/"
             method="post"
             enctype="multipart/form-data"
         >
@@ -21,11 +21,11 @@
             <div class="grid-container">
                 <div class="dropzone item1" id="drop-zone-1">
                     <p> Upload 1st file: </p>
-                    <input id="file-input-1" type="file" />
+                    <input id="file-input-1" type="file" name="file1" />
                 </div>
                 <div class="dropzone item2" id="drop-zone-2">
                     <p> Upload 2nd file: </p>
-                    <input id="file-input-2" type="file" />
+                    <input id="file-input-2" type="file" name="file2" />
                 </div>
             </div>
         </form>
