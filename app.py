@@ -32,26 +32,7 @@ def file_upload():
                 return response
         else:
             return f"upload failed", 400
-        
-        # if len(files) <= 1:
-        #     return f"Failed to upload the minimum number of files (2) {files}", 400
-        # if len(files) > 2:
-        #     return "Exceed maximum number of files (2)", 400
-        # check file type
-        # for file in files:
-        #     if file.filename == "":
-        #         return f"No files selected {file}", 400
-        #     if not file.filename.endswith(".csv"):
-        #         return f"Incorrect file {file.filename}", 400
-        # # get first file -> read into pd from csv
-        # x1 = pd.read_csv(files[0].filename)
-        # # get second file
-        # x2 = pd.read_csv(files[1].filename)
-        # # check col size equal
-        # if not len(x1.columns) == len(x2.columns):
-        #     return "File mismatch (columns)", 400
-        # else:
-        #     # concate
-        #     x3 = pd.concat([x1, x2]) 
-        #     return send_file(x3, mimetype='text/csv', as_attachment=True, download_name='concatenated.csv')
     return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='8080')
