@@ -6,26 +6,14 @@ let fileInput2 = document.getElementById("file-input-2");
 
 let uploadForm = document.getElementById("uploadForm");
 
-dropZone1.addEventListener("click", function () {
+dropZone1.addEventListener("click", function (e) {
+    e.stopPropagation();
     fileInput1.click();
 });
 
-dropZone2.addEventListener("click", function () {
+dropZone2.addEventListener("click", function (e) {
+    e.stopPropagation();
     fileInput2.click();
-});
-
-fileInput1.addEventListener("change", function () {
-    if (fileInput1.files.length > 0){
-        console.log("change");
-        // uploadForm.submit();
-    }
-});
-
-fileInput2.addEventListener("change", function () {
-    if (fileInput2.files.length > 0){
-        console.log("change");
-        // uploadForm.submit();
-    }
 });
 
 dropZone1.addEventListener("dragover", function (e) {
